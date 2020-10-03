@@ -5,10 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Signup Form</title>
   </head>
   <body>
+    <div class="wrapper">
+      <form id="form" autocomplete="on">
+        <h1>Signup Form</h1>
+        <div class="form-input">
+          <label for="fullname">Full name:</label>
+          <input
+            type="text"
+            class="main-input"
+            name="fullname"
+            id="fullname"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="street-address">Street address</label>
+          <input
+            class="main-input"
+            type="text"
+            name="street-address"
+            id="street-address"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            class="main-input"
+            name="email"
+            id="email"
+            autocomplete="on"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="phone">Phone number</label>
+          <input
+            type="text"
+            class="main-input"
+            name="phone"
+            id="phone"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="pwd">Password</label>
+          <input
+            type="password"
+            class="main-input"
+            name="pwd"
+            id="pwd"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            class="main-input"
+            type="password"
+            name="confirm-password"
+            id="confirmPwd"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="terms">
+          <input type="checkbox" id="termbox" name="terms" value="agree" />
+          <label for="terms">
+            I agree to the <a href="#">terms of service</a>.
+          </label>
+        </div>
+        <div class="error-msg">
+          <p id="pwdError"></p>
+        </div>
+        <footer>
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </footer>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

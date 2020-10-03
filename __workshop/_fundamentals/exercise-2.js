@@ -20,10 +20,14 @@ const people = [
 // Use Math.round()
 
 function avgAge(peopleArr) {
-  // return something
+  let sum = peopleArr.reduce(function (acc, obj) {
+    return acc + obj.age;
+  }, 0);
+  return Math.round(sum / peopleArr.length);
 }
 
 // 2. Do a console.log to verify your function.
+console.log(avgAge(people));
 
 // 3. Run the test to validate: yarn test exercise-2
 

@@ -18,10 +18,19 @@ const people = [
 // an argument and returns an array of their full names (each full name is a string).
 
 function fullName(peopleArr) {
-  // return something
+  const newArray = peopleArr.map((person) => {
+    if (person.name.hasOwnProperty("middle")) {
+      return `${person.name.first} ${person.name.middle} ${person.name.last}`;
+    } else {
+      return `${person.name.first} ${person.name.last}`;
+    }
+  });
+
+  return newArray;
 }
 
 // 2. Do a console.log to verify your function.
+console.log(fullName(people));
 
 // 3. Run the test to validate: yarn test exercise-3
 
