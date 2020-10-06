@@ -39,7 +39,6 @@ function checkValidations(event) {
 }
 
 function clearErrors() {
-  document.querySelector(".error-msg").style.display = "none";
   document.getElementById("pwd").classList.remove("pink-outline");
   document.getElementById("confirmPwd").classList.remove("pink-outline");
 }
