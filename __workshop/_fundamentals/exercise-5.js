@@ -88,7 +88,7 @@ const staffMembers = [
 const getData = (arr, key, val) => {
   const newArray = arr.filter((element) => {
     if (key == "javascript" || key == "python" || key == "sql") {
-      return element.skillLevels[key] > val;
+      return element.skillLevels[key] >= val;
     }
     return element[key] == val;
   });
